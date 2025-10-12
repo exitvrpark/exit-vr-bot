@@ -1,2 +1,2 @@
-python-telegram-bot==20.6
+pyTelegramBotAPI==4.29.1
 aiosqlite==0.20.0
