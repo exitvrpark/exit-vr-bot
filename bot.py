@@ -10,7 +10,8 @@ from telegram.ext import (
 
 BOT_TOKEN = os.getenv("7997746340:AAFn0_Yy7vd-n5oMM9Cjl_Jg9HBbxgx2X8A")
 CHANNEL_USERNAME = os.getenv("@exit_vr")
-ADMIN_IDS = {int(x) for x in os.getenv{1290147421}.split(",") if x}
+ADMIN_IDS = {1290147421}
+
 
 DB = "exit_vr.sqlite"
 ASK_NAME, ASK_AGE, ASK_PHONE = range(3)
