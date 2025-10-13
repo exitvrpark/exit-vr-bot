@@ -8,7 +8,7 @@ from telegram.ext import (
     ContextTypes, filters
 )
 
-BOT_TOKEN = os.getenv("7997746340:AAFn0_Yy7vd-n5oMM9Cjl_Jg9HBbxgx2X8A")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_USERNAME = os.getenv("@exit_vr")
 ADMIN_IDS = {1290147421}
 
