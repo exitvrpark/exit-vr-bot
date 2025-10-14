@@ -201,10 +201,6 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except: pass
     await update.message.reply_text(f"Рассылка отправлена {sent} пользователям.")
 
-if __name__ == '__main__':
-    threading.Thread(target=run_web).start()
-    main()
-
 def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
