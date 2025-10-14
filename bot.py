@@ -205,7 +205,7 @@ def main():
     app.add_handler(reg)
     app.add_handler(CommandHandler(["check", "proverka"], check_sub))
     app.add_handler(CommandHandler(["balance", "balans"], balance))
-    app.add_handler(CommandHandler("профиль", profile))
+    app.add_handler(CommandHandler(["profile", "profil"], profile))
 
     # admin
     app.add_handler(CommandHandler("начислить", addpoints_cmd))
