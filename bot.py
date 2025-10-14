@@ -7,6 +7,17 @@ from telegram.ext import (
     ApplicationBuilder, CommandHandler, MessageHandler, ConversationHandler,
     ContextTypes, filters
 )
+from flask import Flask
+import threading
+
+app_web = Flask(__name__)
+
+@app_web.route('/')
+def index():
+    return "EXIT VR Bot is running!"
+
+def run_web():
+    app_web.run(host='0.0.0.0', port=10000)
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_USERNAME = os.getenv("@exit_vr")
@@ -189,6 +200,10 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
             sent += 1
         except: pass
     await update.message.reply_text(f"Рассылка отправлена {sent} пользователям.")
+
+if __name__ == '__main__':
+    threading.Thread(target=run_web).start()
+    main()
 
 def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
