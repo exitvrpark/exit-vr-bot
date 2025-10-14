@@ -208,8 +208,8 @@ def main():
     app.add_handler(CommandHandler(["profile", "profil"], profile))
 
     # admin
-    app.add_handler(CommandHandler("начислить", addpoints_cmd))
-    app.add_handler(CommandHandler("списать", deduct_cmd))
+    app.add_handler(CommandHandler(["addpoints", "nachislit"], addpoints_cmd))
+    app.add_handler(CommandHandler(["deduct", "spisat"], deduct_cmd))
     app.add_handler(CommandHandler("broadcast", broadcast))
 
     app.run_polling()
