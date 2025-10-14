@@ -203,7 +203,7 @@ def main():
         fallbacks=[]
     )
     app.add_handler(reg)
-    app.add_handler(CommandHandler("проверка", check_sub))
+    app.add_handler(CommandHandler(["check", "proverka"], check_sub))
     app.add_handler(CommandHandler("баланс", balance))
     app.add_handler(CommandHandler("профиль", profile))
 
