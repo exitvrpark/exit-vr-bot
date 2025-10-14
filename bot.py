@@ -230,5 +230,11 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
+    # Инициализация базы данных
     asyncio.run(init_db())
+
+    # Запуск Flask-сервера в отдельном потоке (чтобы Render видел, что бот "жив")
+    threading.Thread(target=run_web).start()
+
+    # Запуск Telegram-бота
     main()
